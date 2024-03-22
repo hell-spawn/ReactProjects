@@ -1,0 +1,93 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; 
+}
+.accordion div {
+  display: flex;
+}
+
+.accordion-item {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: var(--color-surface-200);
+  margin-top: 15px;
+}
+
+
+.accordion-header {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  line-height: 2.5rem;
+  padding: 0 .5rem;
+}
+
+.accordion-header:hover {
+  background-color: var(--color-primary-400);
+  color: var(--color-surface-100);
+  font-weight: bold;
+}
+
+.accordion-header.item-active {
+  background-color: var(--color-primary-500);  
+  color: var(--color-surface-100);
+  font-weight: bold;
+}
+
+.accordion-header a{
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.accordion-header.item-active a::after {
+  content: "\002d";
+}
+
+.accordion-header a::after {
+  content: "\002b";
+  position: absolute;
+  right: 0;
+  font-size: 1.5rem;
+}
+
+.accordion-body {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 1rem .5rem;
+}
+
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+} 

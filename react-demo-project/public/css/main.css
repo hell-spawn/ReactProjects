@@ -1,0 +1,128 @@
+@import "./reset.css";
+@import "./grid.css";
+
+
+body {
+  /** CSS LIGHT THEME PRIMARY COLORS */
+  --color-primary-100: #382bf0;
+  --color-primary-200: #5e43f3;
+  --color-primary-300: #7a5af5;
+  --color-primary-400: #9171f8;
+  --color-primary-500: #a688fa;
+  --color-primary-600: #ba9ffb;
+
+  /** CSS LIGHT THEME SURFACE COLORS */
+  --color-surface-100: #ffffff;
+  --color-surface-200: #dcdcdc;
+  --color-surface-300: #989898;
+  --color-surface-400: #656565;
+  --color-surface-500: #464646;
+  --color-surface-600: #292929;
+
+}
+
+body.dark-theme {
+
+  /** CSS DARK THEME PRIMARY COLORS */
+  --color-primary-100: #382bf0;
+  --color-primary-200: #5e43f3;
+  --color-primary-300: #7a5af5;
+  --color-primary-400: #9171f8;
+  --color-primary-500: #a688fa;
+  --color-primary-600: #ba9ffb;
+
+  /** CSS DARK THEME SURFACE COLORS */
+  --color-surface-100: #121212;
+  --color-surface-200: #282828;
+  --color-surface-300: #3f3f3f;
+  --color-surface-400: #575757;
+  --color-surface-500: #717171;
+  --color-surface-600: #8b8b8b;
+
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+  /** CSS DARK THEME PRIMARY COLORS */
+  --color-primary-100: #382bf0;
+  --color-primary-200: #5e43f3;
+  --color-primary-300: #7a5af5;
+  --color-primary-400: #9171f8;
+  --color-primary-500: #a688fa;
+  --color-primary-600: #ba9ffb;
+
+  /** CSS DARK THEME SURFACE COLORS */
+  --color-surface-100: #121212;
+  --color-surface-200: #282828;
+  --color-surface-300: #3f3f3f;
+  --color-surface-400: #575757;
+  --color-surface-500: #717171;
+  --color-surface-600: #8b8b8b;
+
+  --text-color: #ffffff;
+  --bg-color: var(--color-surface-100);
+  }
+
+  body.light-theme {
+  /** CSS LIGHT THEME PRIMARY COLORS */
+  --color-primary-100: #382bf0;
+  --color-primary-200: #5e43f3;
+  --color-primary-300: #7a5af5;
+  --color-primary-400: #9171f8;
+  --color-primary-500: #a688fa;
+  --color-primary-600: #ba9ffb;
+
+  /** CSS LIGHT THEME SURFACE COLORS */
+  --color-surface-100: #ffffff;
+  --color-surface-200: #dcdcdc;
+  --color-surface-300: #989898;
+  --color-surface-400: #656565;
+  --color-surface-500: #464646;
+  --color-surface-600: #292929;
+
+  --text-color: var(--color-surface-600);
+  --bg-color: var(--color-surface-100);
+
+  }
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.btn {
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  width: 100%;
+  line-height: 2.5rem;
+  text-align: center;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-500);
+  color: var(--color-surface-100);
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-400);
+}
+
+.btn-primary:focus {
+  background-color: var(--color-primary-400);
+}
+
+.btn-primary:active {
+  background-color: var(--color-primary-300);
+}
+
+.btn-primary.disabled {
+  background-color: var(--color-surface-600);
+}
